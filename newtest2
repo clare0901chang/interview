@@ -1,0 +1,25 @@
+<?php
+function changestr($str){
+    $str1=str_replace(':','：',$str);
+    echo $str1; 
+    echo "</br>";
+    
+    $str2= str_replace(' ','',$str1);
+    echo $str2; 
+    echo "</br>";
+
+    $begin=strpos($str2,'：');
+    $end=strpos($str2,'-');
+    $str3=substr($str2, $begin, $end-$begin);
+    echo $str3;
+    echo "</br>";   
+    
+ 
+}
+
+$str="人易科技:上機測驗 - 演算法";
+echo $str;
+echo "</br>"; 
+changestr($str);
+
+?>
